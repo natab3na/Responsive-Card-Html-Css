@@ -1,0 +1,211 @@
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Cream);
+    
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 600px;
+    margin: 0px auto;
+    margin-top: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    --imagen-mobile: url("../images/image-product-mobile.jpg");
+    --imagen--desktop:url("../images/image-product-desktop.jpg");
+
+}
+
+.card__img{
+    background-image: var(--imagen-mobile);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card__title{
+    margin:0 auto;
+    margin-top: 20px;
+    margin-left: 25px;
+    font-family:'Montserrat', sans-serif ;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--Dark-grayish-blue);
+}
+.card__title--h1{
+    font-family:'Fraunces', serif ;
+    font-weight: 700;
+    font-size: 30px;
+    color:var(--Very-dark-blue);
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-right: 20px;
+}
+
+.card__paragraph{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--Dark-grayish-blue);
+    margin:10px 20px 10px 25px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.price{
+    display:inline-flex;
+}
+
+.main__price{
+    margin-left: 20px;
+    font-family:'Fraunces', serif ;
+    font-size: 30px;
+    color: var(--Dark-cyan);
+    font-weight: 700;
+    align-items: flex-start;
+    
+}
+
+.main__price--sale{
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 20px;
+    /* margin-bottom: 15px; */
+    font-weight: 500;
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+    font-size: 14px;
+    align-self: center;
+}
+.cta{ 
+    background-color: var(--Dark-cyan);
+    margin: 20px 25px ;
+    padding: 15px 50px ;
+    border-radius: 10px;
+    text-align: center;   
+}
+
+.cta:hover{
+    background-color: var(--Very-dark-blue);
+}
+
+.card__icon{
+    align-self: center;
+    padding-right: 10px;
+}
+
+.card__cta{
+    text-decoration: none;
+    color: var(--White);
+    font-family:'Montserrat', sans-serif;
+    font-size: small;
+
+}
+
+@media(min-width:1440px){
+    .card{
+        display: grid;
+        /* flex-direction: row; 
+        flex-wrap: wrap */;
+        grid-template-columns:repeat(2, 1fr) ;
+         
+        width: 800px;
+        height: 600px;
+        margin: 0px auto;
+        margin-top: 150px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+    .card__img{
+        background-image: var(--imagen--desktop);
+        background-size: cover;
+        background-position: initial;
+        background-repeat: no-repeat;
+        grid-column: 1 / 2;
+        grid-row:1 / 6;
+        /* align-items: flex-start; */
+        height:100%;
+        width: 100%;
+        /* object-fit: contain; */
+        border-radius: 10px 0px 0 10px;
+    }
+
+    .price{
+        align-items: center;
+    }
+
+    .card__title{
+        /* margin:0 auto; */
+        margin-top: 30px;
+        /* margin-left: 25px; */
+       font-size: large;
+        height: min-content;
+         
+    }
+
+    .card__title--h1{
+       /*  display: inline-block; */
+        font-size: 50px;
+        margin-top: 0;
+        margin-left: 30px;
+        margin-right: 20px;
+    }
+
+    .card__paragraph{
+        margin:10px 20px 10px 25px;
+        text-align: left;
+        font-size: 20px; 
+        margin-left: 30px;
+    }
+
+    .main__price{
+        font-size: 40px;
+        margin-left: 30px;
+       
+    }
+
+    .main__price--sale{
+        font-size: 18px;
+    }
+
+    .cta{ 
+        
+        margin: 20px 25px ;
+        padding: 20px 50px;
+        border-radius: 10px;
+        text-align: center; 
+        align-self: center;  
+    }
+    
+    
+    
+    .card__icon{
+        
+        align-self: center;
+        padding-right: 10px;
+    }
+    
+    .card__cta{
+       align-self: center;
+        font-size: large;
+        
+    }
+    
+}
+
